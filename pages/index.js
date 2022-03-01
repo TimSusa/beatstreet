@@ -34,6 +34,16 @@ export default function Home() {
           frameBorder="0"
           style={{ minHeight: 150, minWidth: "70%" }}
         ></iframe>
+         
+        <iframe
+         className={styles.card}
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23039BE5&ctz=America%2FNew_York&mode=WEEK&showPrint=0&showTitle=0&showNav=0&showTabs=1&showCalendars=1&src=YmVhdHN0cmVldHBvc3RAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uZ2VybWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043"
+          width="70%"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+          allowTransparency={true}
+        ></iframe>
         <div className={styles.card}>
           <AblyChatComponent />{" "}
         </div>
