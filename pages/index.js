@@ -21,8 +21,6 @@ export default function Home() {
 
 
       </Head>
-      <Script strategy="beforeInteractive" src="//widget.manychat.com/104648662169940.js"></Script>
-        <Script strategy="beforeInteractive" src="https://mccdn.me/assets/js/widget.js"></Script>
       <main className={styles.main}>
         <h1 className={styles.title}>
           <a href="https://beatstreet.dance">beatstreet</a>
