@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* background: rgba(203, 186, 163, 0.06); */
+  background: linear-gradient(#f69d3c, #3f87a6);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
