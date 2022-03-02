@@ -12,7 +12,7 @@ background: #56a389d6;
     align-items: flex-start;
     gap: 1em;
     padding: 1em;
-    height: calc(100vh - 40px - 100px - 100px - 100px);
+    min-height: calc(100vh - 40px - 100px - 100px - 220px);
     overflow-y: auto;
 }
 
