@@ -8,6 +8,10 @@ const AblyChatComponent = dynamic(
   () => import("../components/AblyChatComponent"),
   { ssr: false }
 );
+const WidgetBotComponent = dynamic(
+  () => import("@widgetbot/react-embed"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
@@ -49,6 +53,19 @@ export default function Home() {
           className={styles.card}
           style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
+
+        {/* <iframe
+          src="https://e.widgetbot.io/channels/948422756477833216/948435054995050556"
+          height="600"
+          style={{ minHeight: 250, minWidth: "90%" }}
+        ></iframe> */}
+
+        <WidgetBotComponent 
+        server="948422756477833216" 
+        channel="948422756976963634"
+        height="300"
+        style={{  minWidth: "90%" }}
+        />
         {/* <iframe
           className={styles.card}
           src="https://discord.com/widget?id=948422756477833216&theme=dark"
@@ -66,10 +83,6 @@ export default function Home() {
           frameBorder="0"
           scrolling="no"
           style={{ minWidth: "90%" }}
-        ></iframe>
-        <iframe src="https://e.widgetbot.io/channels/948422756477833216/948435054995050556" height="600" 
-        width="800"
-        style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
         <div className={styles.card}>
           <AblyChatComponent />{" "}
