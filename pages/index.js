@@ -4,10 +4,7 @@ import Head from "next/head";
 // import Script from "next/script";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
-// const AblyChatComponent = dynamic(
-//   () => import("../components/AblyChatComponent"),
-//   { ssr: false }
-// );
+
 const WidgetBotComponent = dynamic(
   () => import("@widgetbot/react-embed"),
   { ssr: false }
@@ -58,7 +55,9 @@ export default function Home() {
         frameBorder="0" 
         className={styles.card}
         style={{ minHeight: 150, minWidth: "90%" }}
-        scrolling="no" height="378" width="620"
+        scrolling="no" 
+        height="378" 
+        width="620"
         ></iframe>
         <WidgetBotComponent 
         server="948422756477833216" 
@@ -74,9 +73,6 @@ export default function Home() {
           scrolling="no"
           style={{ minWidth: "90%" }}
         ></iframe>
-        {/* <div className={styles.card}>
-          <AblyChatComponent />{" "}
-        </div> */}
       </main>
 
       <footer className={styles.footer}></footer>
