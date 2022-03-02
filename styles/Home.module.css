@@ -66,8 +66,8 @@
 .description {
   margin: 1rem 0;
   line-height: 1.5;
-  font-size: 1.0rem;
-  color: rgb(50 251 191);
+  font-size: 1.5rem;
+  color: rgb(83, 251, 50);
   width: 80%;
 }
 
@@ -107,13 +107,14 @@
 }
 
 .main h1 {
+  font-family: Sacramento, sans-serif;
   text-align: center;
-  min-width: 50%;
-  font-size: 1.5rem;
+  min-width: 30%;
+  font-size: 3rem;
   animation: pulsate 1.5s infinite alternate;  
-  border: 0.2rem solid #fff;
-  border-radius: 1rem;
-  padding: 0.2rem 0.2rem;
+line-height: 1.4;
+  border-radius: .7rem;
+  padding: .3rem 0 0 0;
   box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #bc13fe,
