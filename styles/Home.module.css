@@ -66,8 +66,9 @@
 .description {
   margin: 1rem 0;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   color: rgb(50 251 191);
+  width: 80%;
 }
 
 .code {
@@ -107,12 +108,12 @@
 
 .main h1 {
   text-align: center;
-  width: 70%;
-  font-size: 2.0rem;
+  min-width: 50%;
+  font-size: 1.5rem;
   animation: pulsate 1.5s infinite alternate;  
   border: 0.2rem solid #fff;
   border-radius: 1rem;
-  padding: 0.1rem 0.2rem;
+  padding: 0.2rem 0.2rem;
   box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #bc13fe,

@@ -23,13 +23,16 @@ export default function Home() {
           <a href="https://beatstreet.dance">beatstreet</a>
         </h1>
 
-        <p className={styles.description}>Underground Dance Music Nonstop </p>
+       
+        <div className={styles.description}>
+        Underground Dance Music Nonstop
+        </div>
 
         <iframe
           className={styles.card}
           src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/embed?theme=dark"
           frameBorder="1"
-          style={{ minHeight: 100, minWidth: "90%", border: 0 }}
+          style={{ minHeight: 100, minWidth: "90%", border: 0}}
         ></iframe>
         <iframe
           src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/history?theme=dark"
