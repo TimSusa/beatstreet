@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-script-component-in-head */
 import Head from "next/head";
-import Image from "next/image";
-import Script from "next/script";
+// import Image from "next/image";
+// import Script from "next/script";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 const AblyChatComponent = dynamic(
@@ -37,7 +37,7 @@ export default function Home() {
           style={{ minHeight: 100, minWidth: "90%", border: 0 }}
         ></iframe>
 
-        <div className={styles.description}>
+        {/* <div className={styles.description}>
           <a href="/beatstreet.pls" target="_blank">
             Open Player .pls
           </a>
@@ -45,7 +45,7 @@ export default function Home() {
           <a href="/beatstreet.m3u" target="_blank">
             Open Player .m3u
           </a>
-        </div>
+        </div> */}
 
         <iframe
           src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/history?theme=dark"
@@ -53,29 +53,12 @@ export default function Home() {
           className={styles.card}
           style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
-
-        {/* <iframe
-          src="https://e.widgetbot.io/channels/948422756477833216/948435054995050556"
-          height="600"
-          style={{ minHeight: 250, minWidth: "90%" }}
-        ></iframe> */}
-
         <WidgetBotComponent 
         server="948422756477833216" 
         channel="948422756976963634"
         height="300"
         style={{  minWidth: "90%" }}
         />
-        {/* <iframe
-          className={styles.card}
-          src="https://discord.com/widget?id=948422756477833216&theme=dark"
-          width="650"
-          height="600"
-          frameBorder="0"
-          id= "chatwidget"
-          name= "chatwidget"
-          style={{ minHeight: 150, minWidth: "90%" }}
-        ></iframe> */}
         <iframe
           className={styles.card}
           src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23039BE5&ctz=America%2FNew_York&mode=WEEK&showPrint=0&showTitle=0&showNav=0&showTabs=1&showCalendars=1&src=YmVhdHN0cmVldHBvc3RAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uZ2VybWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043"
