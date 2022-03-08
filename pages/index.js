@@ -55,8 +55,8 @@ export default function Home() {
           className={styles.card}
           style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
-        {/* <iframe 
-        src="https://player.twitch.tv/?channel=beatstreet54&parent=beatstreet.dance" 
+         <iframe 
+        src="https://player.twitch.tv/?channel=channel=just__joe_&parent=beatstreet.dance" 
         frameBorder="0" 
         className={styles.card}
         style={{ minHeight: 150, minWidth: "90%" }}
@@ -65,7 +65,7 @@ export default function Home() {
         width="620"
         >
 
-        </iframe> */}
+        </iframe> 
         <WidgetBotComponent 
         server="948422756477833216" 
         channel="948422756976963634"
