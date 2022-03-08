@@ -66,6 +66,9 @@ export default function Home() {
         >
 
 <iframe src="https://www.twitch.tv/embed/just__joe_/chat?parent=beatstreet.dance"
+        frameBorder="0" 
+        className={styles.card}
+        style={{ minHeight: 150, minWidth: "90%" }}
         height="378" 
         width="620">
 </iframe>
