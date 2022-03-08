@@ -56,7 +56,7 @@ export default function Home() {
           style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
          <iframe 
-        src="https://player.twitch.tv/?channel=channel=just__joe_&parent=beatstreet.dance" 
+        src="https://player.twitch.tv/?channel=just__joe_&parent=beatstreet.dance" 
         frameBorder="0" 
         className={styles.card}
         style={{ minHeight: 150, minWidth: "90%" }}
