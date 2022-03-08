@@ -5,10 +5,9 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 
-const WidgetBotComponent = dynamic(
-  () => import("@widgetbot/react-embed"),
-  { ssr: false }
-);
+const WidgetBotComponent = dynamic(() => import("@widgetbot/react-embed"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -18,9 +17,9 @@ export default function Home() {
         <meta name="description" content="Nonstop Club Sounds" />
         <meta charSet="utf-8" />
         <link
-            href="https://fonts.googleapis.com/css?family=Sacramento:300,400,700,900"
-            rel="stylesheet"
-          />
+          href="https://fonts.googleapis.com/css?family=Sacramento:300,400,700,900"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
@@ -55,30 +54,30 @@ export default function Home() {
           className={styles.card}
           style={{ minHeight: 150, minWidth: "90%" }}
         ></iframe>
-         <iframe 
-        src="https://player.twitch.tv/?channel=just__joe_&parent=beatstreet.dance" 
-        frameBorder="0" 
-        className={styles.card}
-        style={{ minHeight: 150, minWidth: "90%" }}
-        scrolling="no" 
-        height="378" 
-        width="620"
+        <iframe
+          src="https://player.twitch.tv/?channel=just__joe_&parent=beatstreet.dance"
+          frameBorder="0"
+          className={styles.card}
+          style={{ minHeight: 150, minWidth: "90%" }}
+          scrolling="no"
+          height="378"
+          width="620"
         >
-
-<iframe src="https://www.twitch.tv/embed/just__joe_/chat?parent=beatstreet.dance"
-        frameBorder="0" 
-        className={styles.card}
-        style={{ minHeight: 150, minWidth: "90%" }}
-        height="378" 
-        width="620">
-</iframe>
-
-        </iframe> 
-        <WidgetBotComponent 
-        server="948422756477833216" 
-        channel="948422756976963634"
-        height="300"
-        style={{  minWidth: "90%" }}
+          <iframe
+            src="https://www.twitch.tv/embed/just__joe_/chat?parent=beatstreet.dance"
+            id="twitch-chat-embed"
+            frameBorder="0"
+            className={styles.card}
+            style={{ minHeight: 150, minWidth: "90%" }}
+            height="378"
+            width="620"
+          ></iframe>
+        </iframe>
+        <WidgetBotComponent
+          server="948422756477833216"
+          channel="948422756976963634"
+          height="300"
+          style={{ minWidth: "90%" }}
         />
         <iframe
           className={styles.card}
