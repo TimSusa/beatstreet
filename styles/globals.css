@@ -10,8 +10,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  list-style-type: none;
+}
+
+
+nav {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  display: flex;
+}
+
+ul {
+  color: white;
+  list-style-type: none;
 }
 
 * {
   box-sizing: border-box;
 }
+
