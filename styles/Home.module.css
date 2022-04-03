@@ -83,6 +83,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .footer {
@@ -162,7 +163,7 @@
 width: 90%;
   /* border: 1px solid #eaeaea; */
   border-radius: 10px;
-  background: #26262696;
+  background: #262626dc;
 }
 
 .card:hover,
