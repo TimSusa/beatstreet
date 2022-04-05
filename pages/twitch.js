@@ -25,7 +25,7 @@ export default function Twitch() {
             height: 800,
             muted: true,
             autoplay: false,
-            channel: "beatstreet54",//"just__joe_",
+            channel: "just__joe_",
             // Only needed if this page is going to be embedded on other websites
             parent: ["beatstreet.dance"],
           });
