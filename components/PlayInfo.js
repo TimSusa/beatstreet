@@ -10,7 +10,9 @@ export function PlayInfo() {
     fetch("https://fm.soundzmuzicradio.com/api/nowplaying")
       .then((res) => res.json())
       .then((tmp) => {
-        if (tmp[0]?.now_playing.song.title !== data[0]?.now_playing.song.title) {
+        if (
+          tmp[0]?.now_playing.song.title !== data[0]?.now_playing.song.title
+        ) {
           setData(tmp[0]);
         }
       });
@@ -25,7 +27,7 @@ export function PlayInfo() {
   }, []);
 
   if (!data) return <div></div>;
-  console.log(data)
+  console.log(data);
   return (
     <div
       className={styles.card}
@@ -42,10 +44,10 @@ export function PlayInfo() {
           border: 0,
           borderRadius: 5,
           width: "150px",
-
+          margin: "auto 4px auto 4px",
           textAlign: "center",
           //margin: "auto",
-          padding: 8,
+          //padding: 8,
         }}
       >
         <Image
@@ -59,19 +61,19 @@ export function PlayInfo() {
       <div
         style={{
           border: 0,
-          padding: "2%",
-          height: "150px",
+          padding: "2% 2% 0",
+          height: "130px",
           borderRadius: 5,
-          background: data?.live.is_live ? '#9d1b1b96' : 'inherit',
-          overflowY: 'scroll'
-
+          background: data?.live.is_live ? "#9d1b1b96" : "inherit",
+          overflowY: "scroll",
+          width: "100%",
         }}
       >
         <h3 className={styles.h3}>Now Playing:</h3>
         <p>{data?.now_playing.song.title}</p>
         <p>{data?.now_playing.song.artist}</p>
         <p>{data?.now_playing.song.text}</p>
-        <p>{data?.live.is_live ? 'LIVE ON AIR' : 'Mix Recording'}</p>
+        <p>{data?.live.is_live ? "LIVE ON AIR" : "Mix Recording"}</p>
         <p> Total Listeners: {data?.listeners.total}</p>
         <br></br>
         <h3 className={styles.h3}>Next Playing:</h3>

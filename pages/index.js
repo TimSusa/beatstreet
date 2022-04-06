@@ -24,7 +24,6 @@ console.log('hiome ', props)
             </a>
             <div className={styles.description}></div>
           </div>
-          <div className={styles.card}>{listeners}</div>
         {/* 
         <iframe
           className={styles.card}
