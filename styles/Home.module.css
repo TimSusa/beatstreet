@@ -83,7 +83,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  color: rgb(176, 182, 175);
 }
 
 .footer {
@@ -123,15 +123,19 @@
 .title,
 .description {
   text-align: center;
-  
+  color: rgb(176, 182, 175)
 }
 
 .description {
   margin: 1rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-  color: rgb(83, 251, 50);
+  color:  rgb(176, 182, 175);
   width: 80%;
+}
+
+.description:hover {
+  color: #bc13fe;
 }
 
 .code {
@@ -169,8 +173,8 @@ width: 90%;
 .card:hover,
 .card:focus,
 .card:active {
-  color: #1d1e1f;
-  border-color: #656a72;
+  /* color: #1d1e1f;
+  border-color: #656a72; */
 }
 
 

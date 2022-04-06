@@ -4,13 +4,14 @@ import Link from "next/link";
 export const navLinks = [
   { name: "Home", path: "/" },
   {
-    name: "Chat",
-    path: "/chat",
-  },
-  {
     name: "Twitch",
     path: "/twitch",
   },
+  {
+    name: "Chat",
+    path: "/chat",
+  },
+
 ];
 
 export function Navigation() {

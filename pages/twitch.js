@@ -3,16 +3,12 @@ import { useState, useEffect } from "react";
 import Script from "next/script";
 
 export default function Twitch() {
-  const [stripe, setStripe] = useState({});
-
   useEffect(() => {
-    if (typeof window.twitch !== "undefined") {
-      window.twitch.addEventListener(window.twitch.VIDEO_READY, () => {
-        var player = window.twitch.getPlayer();
-        player.pause();
-      });
+    return ()=>{
+      delete window.Twitch
+      window.Twitch = {}
     }
-  }, [stripe]);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -33,25 +29,9 @@ export default function Twitch() {
       />
 
       <main className={styles.main}>
-        Please be aware not to run two players in parallel ;-)
+       <p> Please be aware not to run two players in parallel ;-)</p>
         <div id="twitch-embed" className={styles.card}>
-          <Script
-            id="twitch-script"
-            strategy="lazyOnload"
-            onLoad={() => {
-              setStripe(window.Twitch);
-            }}
-          />
         </div>
-        {/* <iframe
-          id="twitch-iframe"
-          src="https://player.twitch.tv/?channel=just__joe_&parent=beatstreet.dance"
-          frameBorder="0"
-          className={styles.card}
-          style={{ minHeight: 450, minWidth: "70%" }}
-          height="378"
-          width="620"
-        ></iframe> */}
       </main>
     </div>
   );
