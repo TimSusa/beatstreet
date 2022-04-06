@@ -5,30 +5,25 @@ import { useInterval } from "../utils/useInterval";
 
 export function PlayInfo() {
   const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
 
   useInterval(() => {
-    console.log("check...");
-    setLoading(true);
     fetch("https://fm.soundzmuzicradio.com/api/nowplaying")
       .then((res) => res.json())
-      .then((data) => {
-        setData(data[0]);
-        setLoading(false);
+      .then((tmp) => {
+        if (tmp[0]?.now_playing.song.title !== data[0]?.now_playing.song.title) {
+          setData(tmp[0]);
+        }
       });
   }, 1000 * 60);
 
   useEffect(() => {
-    setLoading(true);
     fetch("https://fm.soundzmuzicradio.com/api/nowplaying")
       .then((res) => res.json())
       .then((data) => {
         setData(data[0]);
-        setLoading(false);
       });
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
   if (!data) return <div></div>;
   return (
     <div
