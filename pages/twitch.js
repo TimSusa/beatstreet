@@ -4,6 +4,7 @@ import Script from "next/script";
 import ReactPlayer from "react-player";
 
 export default function Twitch() {
+  const [isJoe, setIsJoe] = useState("joe")
   // useEffect(() => {
   //   return () => {
   //     delete window.Twitch;
@@ -34,12 +35,20 @@ export default function Twitch() {
           Please be aware: In order not to run two sound sources in parallel,
           Twitch will be muted.
         </p>
+        <p>
+        <div onChange={(event)=>{setIsJoe(event.target.value)}}>
+        <input type="radio" value={(isJoe === 'joe' )? 'joe' : ''} name="uffn" /> Just Joe 
+        <input type="radio" value={(isJoe !== 'joe' )? 'beat' : ''} name="uffn" /> BeatStreet
+      </div>
+        </p>
          {/* <div id="twitch-embed" className={styles.card}>
         </div>  */}
+        <div style={{width: "70%"}}>
         <ReactPlayer
+        
           playing
           controls
-          width="70%"
+          //width="70%"
           height="450px"
           config={{
             youtube: {
@@ -51,14 +60,17 @@ export default function Twitch() {
                 height: "450px",
                 muted: true,
                 autoplay: false,
-                channel: "just__joe_",
+                channel: isJoe === "joe" ? "just__joe_" : "beatstreet54",
                 // Only needed if this page is going to be embedded on other websites
                 parent: ["beatstreet.dance"],
               },
             }
           }}
-          url="https://www.twitch.tv/videos/1447276047"
+          url={isJoe === "joe" ?"https://www.twitch.tv/videos/1447276047" : "https://www.twitch.tv/beatstreet54"}
         />
+
+        </div>
+
       </main>
     </div>
   );
