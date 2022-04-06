@@ -39,7 +39,7 @@ li {
   width: 80px;
 }
 
-li:hover {
+li a:hover {
   color: #bc13fe;
 }
 * {

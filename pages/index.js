@@ -1,20 +1,23 @@
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home(props) {
+  
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <iframe
+
+        {/* <iframe
           src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/history?theme=dark"
           frameBorder="0"
           className={styles.card}
           style={{ minHeight: "40vh", minWidth: "90%" }}
           sandbox="allow-scripts allow-same-origin"
-        ></iframe>
+        ></iframe> */}
         <div className={styles.description}>
           <div className={styles.card}>
             <a href="/beatstreet.pls" target="_blank">
               Open in extern Player .pls (mac)
+              
             </a>
             <div className={styles.description}></div>
           </div>

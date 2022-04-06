@@ -1,9 +1,12 @@
+
 import { Navigation } from "../components/Navigation";
-import Head from "next/head";
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
+import {PlayInfo} from '../components/PlayInfo'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, playing }) {
+
+
   return (
     <div>
       <header>
@@ -14,7 +17,24 @@ function MyApp({ Component, pageProps }) {
               <a href="https://beatstreet.dance">Beat Street</a>
             </h1>
           </div>
-          <iframe
+          <div className={styles.main}>
+
+            <PlayInfo></PlayInfo>
+            <audio
+              controls
+              style={{
+                border: 0,
+                width: "70%",
+              }}
+            >
+              <source
+                src="https://fm.soundzmuzicradio.com/radio/8000/radio.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </div>
+
+          {/* <iframe
             className={styles.card}
             src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/embed?theme=dark"
             frameBorder="1"
@@ -25,7 +45,7 @@ function MyApp({ Component, pageProps }) {
               marginRight: "5%",
             }}
             sandbox="allow-scripts allow-same-origin"
-          ></iframe>
+          ></iframe> */}
         </div>
       </header>
       <Component {...pageProps} />
@@ -36,3 +56,6 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+
+
