@@ -62,9 +62,10 @@ export function PlayInfo() {
         }}
       >
         <h3 className={styles.h3}>Now Playing:</h3>
+        <p>{data?.now_playing.song.title}</p>
         <p>{data?.now_playing.song.artist}</p>
         <p>{data?.now_playing.song.text}</p>
-        <p>{data?.now_playing.song.title}</p>
+        <p> Total Listeners: {data?.listeners.total}</p>
       </div>
     </div>
   );

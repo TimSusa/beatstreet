@@ -63,39 +63,3 @@ export default function Twitch() {
     </div>
   );
 }
-{
-  /* <ReactPlayer
-light={data?.now_playing.song.art}
-onBuffer={(pl) => {
-  console.log("palyyyy: ", pl);
-}}
-playing
-controls
-width="80%"
-height="80%"
-config={{
-  youtube: {
-    playerVars: { showinfo: 1 },
-  },
-  twitch: {
-    options: {
-      width: "100%",
-      height: 800,
-      muted: true,
-      autoplay: false,
-      channel: "just__joe_",
-      // Only needed if this page is going to be embedded on other websites
-      parent: ["beatstreet.dance"],
-    },
-  },
-  file: {
-    forceAudio: false,
-    forceFLV: false,
-  },
-  attributes: {
-    poster: data.now_playing.song.art,
-  },
-}}
-url="https://fm.soundzmuzicradio.com/radio/8000/radio.mp3"
-/>{" "} */
-}
