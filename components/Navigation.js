@@ -21,7 +21,7 @@ export function Navigation() {
         return (
           <ul key={`nav-${index}`}>
             <Link href={link.path} passHref>
-              <li key={index}>{link.name}</li>
+              {link.name}
             </Link>
           </ul>
         );

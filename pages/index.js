@@ -1,11 +1,11 @@
 import styles from "../styles/Home.module.css";
 
 export default function Home(props) {
-  
+  const {listeners} = props;
+console.log('hiome ', props)
   return (
-    <div className={styles.container}>
+    <div >
       <main className={styles.main}>
-
         {/* <iframe
           src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/history?theme=dark"
           frameBorder="0"
@@ -13,20 +13,18 @@ export default function Home(props) {
           style={{ minHeight: "40vh", minWidth: "90%" }}
           sandbox="allow-scripts allow-same-origin"
         ></iframe> */}
-        <div className={styles.description}>
           <div className={styles.card}>
+            <p>Open in external Player: </p>
             <a href="/beatstreet.pls" target="_blank">
-              Open in extern Player .pls (mac)
-              
+              Download .pls
+            </a>
+            <br></br>
+            <a href="/beatstreet.m3u" target="_blank">
+              Download .m3u
             </a>
             <div className={styles.description}></div>
           </div>
-          <div className={styles.card}>
-          <a href="/beatstreet.m3u" target="_blank">
-            Open in extern Player .m3u (win)
-          </a>
-        </div>
-        </div>
+          <div className={styles.card}>{listeners}</div>
         {/* 
         <iframe
           className={styles.card}

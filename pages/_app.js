@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps, playing }) {
               controls
               style={{
                 border: 0,
-                width: "70%",
+                //width: "70%",
               }}
             >
               <source
