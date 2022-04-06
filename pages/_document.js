@@ -8,7 +8,7 @@ export default function Document() {
       <meta name="description" content="Nonstop Club Sounds" />
       <meta charSet="utf-8" />
       <link
-        href="https://fonts.googleapis.com/css?family=Sacramento:300,400,700,900&display=optional"
+        href="https://fonts.googleapis.com/css?family=Sacramento:300,400,700,900\&display=swap"
         rel="stylesheet"
       />
       <link rel="icon" href="/favicon.ico" />

@@ -29,7 +29,7 @@ export default function Twitch() {
       />
 
       <main className={styles.main}>
-       <p> Please be aware not to run two players in parallel ;-)</p>
+       <p> Please be aware: In order not to run two sound sources in parallel, Twitch will be muted.</p>
         <div id="twitch-embed" className={styles.card}>
         </div>
       </main>
