@@ -27,7 +27,7 @@ export function PlayInfo() {
   }, []);
 
   if (!data) return <div></div>;
-  console.log(data);
+
   return (
     <div
       className={styles.card}
@@ -61,7 +61,8 @@ export function PlayInfo() {
       <div
         style={{
           border: 0,
-          padding: "2% 2% 0",
+          //padding: "2% 2% 0",
+          marginLeft: 8,
           height: "130px",
           borderRadius: 5,
           background: data?.live.is_live ? "#9d1b1b96" : "inherit",
@@ -69,14 +70,17 @@ export function PlayInfo() {
           width: "100%",
         }}
       >
-        <h3 className={styles.h3}>Now Playing:</h3>
+        {/* <h3 className={styles.h3}>Now Playing:</h3> */}
+        <p>{data?.live.is_live ? "LIVE ON AIR:" : "Now Playing:"}</p>
+        <p>{data?.live.is_live && data?.live.streamer_name}</p>
         <p>{data?.now_playing.song.title}</p>
         <p>{data?.now_playing.song.artist}</p>
         <p>{data?.now_playing.song.text}</p>
-        <p>{data?.live.is_live ? "LIVE ON AIR" : "Mix Recording"}</p>
+
+
         <p> Total Listeners: {data?.listeners.total}</p>
         <br></br>
-        <h3 className={styles.h3}>Next Playing:</h3>
+        <p>Next Playing:</p>
         <p>{data?.playing_next.song.artist}</p>
         <p>{data?.playing_next.song.title}</p>
       </div>

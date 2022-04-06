@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps, playing }) {
               controls
               style={{
                 border: 0,
-                width: "70%",
+                width: "80%",
                 marginBottom: 16
               }}
             >
@@ -34,19 +34,6 @@ function MyApp({ Component, pageProps, playing }) {
               />
             </audio>
           </div>
-
-          {/* <iframe
-            className={styles.card}
-            src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/embed?theme=dark"
-            frameBorder="1"
-            style={{
-              border: 0,
-              width: "90%",
-              marginLeft: "5%",
-              marginRight: "5%",
-            }}
-            sandbox="allow-scripts allow-same-origin"
-          ></iframe> */}
         </div>
       </header>
       <Component {...pageProps} />

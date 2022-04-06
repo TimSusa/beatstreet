@@ -6,13 +6,6 @@ console.log('hiome ', props)
   return (
     <div >
       <main className={styles.main}>
-        {/* <iframe
-          src="https://fm.soundzmuzicradio.com/public/soundzmuzicradio/history?theme=dark"
-          frameBorder="0"
-          className={styles.card}
-          style={{ minHeight: "40vh", minWidth: "90%" }}
-          sandbox="allow-scripts allow-same-origin"
-        ></iframe> */}
           <div className={styles.card}>
             <p>Open in external Player: </p>
             <a href="/beatstreet.pls" target="_blank">
