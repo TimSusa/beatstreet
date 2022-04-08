@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+
 import styles from "../styles/Home.module.css";
 
 export default function Chat() {
@@ -11,7 +11,7 @@ export default function Chat() {
           height="200"
           allowtransparency="true"
           frameBorder={0}
-          sandbox="allow-scripts allow-same-origin"
+          //sandbox="allow-scripts allow-same-origin"
           style={{
             border: 0,
             width: "90%",

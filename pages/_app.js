@@ -2,24 +2,24 @@ import { Navigation } from "../components/Navigation";
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
 import { PlayInfo } from "../components/PlayInfo";
-import * as ga from "../lib/analytics";
-import { useEffect } from "react";
-import Router from "next/router";
-import { route } from "next/dist/server/router";
-import { useRouter } from "next/router";
+// import * as ga from "../lib/analytics";
+// import { useEffect } from "react";
+// import Router from "next/router";
+// import { route } from "next/dist/server/router";
+// import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps, playing }) {
-  const router = useRouter();
+  //const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  // useEffect(() => {
+  //   const handleRouteChange = (url) => {
+  //     ga.pageview(url);
+  //   };
+  //   router.events.on("routeChangeComplete", handleRouteChange);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", handleRouteChange);
+  //   };
+  // }, [router.events]);
   return (
     <div>
       <header>
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps, playing }) {
           </div>
         </div>
       </header>
-      <Component {...pageProps} key={route} />
+      <Component {...pageProps}/>
 
       <footer className={styles.footer}></footer>
     </div>

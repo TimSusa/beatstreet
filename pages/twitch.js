@@ -4,7 +4,7 @@ import Script from "next/script";
 import ReactPlayer from "react-player";
 
 export default function Twitch() {
-  const [isJoe, setIsJoe] = useState("joe");
+  const [isJoe, setIsJoe] = useState("beat");
   const [isChat, setIsChat] = useState(false);
 
   return (
@@ -60,11 +60,11 @@ export default function Twitch() {
           {isChat ? (         
              <iframe
             id="twitch-chat-embed"
-            sandbox="allow-scripts allow-same-origin"
+            //sandbox="allow-scripts allow-same-origin"
             src={`https://www.twitch.tv/embed/${
               isJoe === "joe" ? "just__joe_" : "beatstreet54"
             }/chat?parent=beatstreet.dance`}
-            height="100%"
+            height="450px"
             width="100%"
           ></iframe>) : (<div></div>)}
 
