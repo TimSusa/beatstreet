@@ -51,26 +51,32 @@ export function PlayInfo() {
           src={data?.now_playing.song.art}
         ></Image>
       </div>
+
       <div
         style={{
           border: 0,
           marginLeft: 8,
-          height: "130px",
           borderRadius: 5,
-          background: data?.live.is_live ? "#9d1b1b96" : "inherit",
-          overflowY: "scroll",
-          width: "100%",
+          background: data?.live.is_live ? "#9d1b1b96" : "none",
         }}
       >
-        <p>{data?.live.is_live ? "LIVE ON AIR:" : "Now Playing:"}</p>
-        <p>{data?.live.is_live && data?.live.streamer_name}</p>
-        <p>{data?.now_playing.song.title}</p>
+      <h4>{data?.live.is_live ? "LIVE ON AIR:" : "Now:"}</h4>
         <p>{data?.now_playing.song.artist}</p>
+        <p>{data?.now_playing.song.title}</p>
         <p>{data?.now_playing.song.text}</p>
 
-        <p> Total Listeners: {data?.listeners.total}</p>
-        <br></br>
-        <p>Next Playing:</p>
+        <h4> Total Listeners: {data?.listeners.total}</h4>
+      </div>
+      
+      <div
+        style={{
+          border: 0,
+          marginLeft: 8,
+          borderRadius: 5,
+          background: data?.live.is_live ? "#9d1b1b96" : "none",
+        }}
+      >
+<h4>Next:</h4>
         <p>{data?.playing_next.song.artist}</p>
         <p>{data?.playing_next.song.title}</p>
       </div>
