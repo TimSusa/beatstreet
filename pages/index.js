@@ -2,7 +2,6 @@ import styles from "../styles/Home.module.css";
 
 export default function Home(props) {
   const {listeners} = props;
-console.log('hiome ', props)
   return (
     <div >
       <main className={styles.main}>

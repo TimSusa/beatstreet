@@ -5,6 +5,13 @@ import NchanSubscriber from "nchan";
 
 export function PlayInfo() {
   const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("https://fm.soundzmuzicradio.com/api/nowplaying")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data[0]);
+      });
+  }, []);
 
   useEffect(() => {
     let sub = new NchanSubscriber(
@@ -20,6 +27,9 @@ export function PlayInfo() {
       console.error(eror);
     });
     sub.start();
+    return function(){
+      sub.close()
+    }
   }, []);
 
   if (!data) return <div></div>;
