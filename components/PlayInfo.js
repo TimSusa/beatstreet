@@ -1,53 +1,32 @@
-import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import NchanSubscriber from "nchan";
+import { useAppContext } from "../components/Context";
 
 export function PlayInfo() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch("https://fm.soundzmuzicradio.com/api/nowplaying")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data[0]);
-      });
-  }, []);
-
-  useEffect(() => {
-    let sub = new NchanSubscriber(
-      `https://fm.soundzmuzicradio.com/api/live/nowplaying/soundzmuzicradio`
-    );
-    let nowPlaying;
-    sub.on("message", function (message, message_metadata) {
-      nowPlaying = JSON.parse(message);
-      setData(nowPlaying);
-    });
-
-    sub.on("error", function (eror) {
-      console.error(eror);
-    });
-    sub.start();
-    return function(){
-      sub.close()
-    }
-  }, []);
-
+  const data = useAppContext();
+  console.log(data);
   if (!data) return <div></div>;
-
   return (
     <div
       className={styles.card}
       style={{
         display: "flex",
-        border: 0,
+        flexDirection: "row",
+        alignContent: "stretch",
+        alignItems: "stretch",
+        //border: "1px solid grey",
       }}
     >
       <div
         style={{
-          border: 0,
+          // border: "1px solid grey",
+          padding: 8,
+          margin: 8,
           borderRadius: 5,
-          width: "150px",
-          margin: "auto 4px auto 4px",
+          width: "100%",
+          maxWidth: 150,
+          height: "100%",
+          margin: "0 4px 0 4px",
           textAlign: "center",
           //margin: "auto",
           //padding: 8,
@@ -64,31 +43,46 @@ export function PlayInfo() {
 
       <div
         style={{
-          border: 0,
-          marginLeft: 8,
+          //border: "1px solid grey",
+          padding: 4,
+          margin: "0 4px 0 0",
+          // marginLeft: 8,
           borderRadius: 5,
+          width: "25%",
           background: data?.live.is_live ? "#9d1b1b96" : "none",
         }}
       >
-      <h4>{data?.live.is_live ? "LIVE ON AIR:" : "Now:"}</h4>
+        <h5>{data?.live.is_live ? "LIVE ON AIR:" : "Now:"}</h5>
         <p>{data?.now_playing.song.artist}</p>
         <p>{data?.now_playing.song.title}</p>
         <p>{data?.now_playing.song.text}</p>
-
-        <h4> Total Listeners: {data?.listeners.total}</h4>
       </div>
-      
+
       <div
         style={{
-          border: 0,
-          marginLeft: 8,
+          // border: "1px solid grey",
+          margin: "0 4px 0 0",
+          padding: 4,
+          minWidth: "30%",
           borderRadius: 5,
           background: data?.live.is_live ? "#9d1b1b96" : "none",
         }}
       >
-<h4>Next:</h4>
+        <h5>Next:</h5>
         <p>{data?.playing_next.song.artist}</p>
         <p>{data?.playing_next.song.title}</p>
+      </div>
+
+      <div
+        style={{
+          //border: "1px solid grey",
+          padding: 4,
+          minWidth: "15%",
+          borderRadius: 5,
+          background: data?.live.is_live ? "#9d1b1b96" : "none",
+        }}
+      >
+        <h5>Listeners: {data?.listeners.total}</h5>
       </div>
     </div>
   );
