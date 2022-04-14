@@ -17,7 +17,7 @@ export function AppWrapper({ children }) {
     });
 
     sub.on("error", function (eror) {
-      console.error(eror);
+      throw new Error(error)
     });
     sub.start();
 

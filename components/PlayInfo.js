@@ -4,7 +4,6 @@ import { useAppContext } from "../components/Context";
 
 export function PlayInfo() {
   const data = useAppContext();
-  console.log(data);
   if (!data) return <div></div>;
   return (
     <div
