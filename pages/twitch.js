@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
-import Script from "next/script";
+import { useState } from "react";
 import ReactPlayer from "react-player";
 
 export default function Twitch() {
@@ -22,7 +21,6 @@ export default function Twitch() {
         >
           <h3>Video Stream Selection:</h3>
           <div>
-            {" "}
             <input
               type="button"
               value="just_joe"
