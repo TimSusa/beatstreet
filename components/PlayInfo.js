@@ -53,9 +53,9 @@ export function PlayInfo() {
       >
         <h5>{data?.live.is_live ? "LIVE ON AIR:" : "Now:"}</h5>
         <p>{'DJ: ' + data?.live.streamer_name}</p>
-        <p>{data?.now_playing.song.artist}</p>
-        <p>{data?.now_playing.song.title}</p>
-        <p>{data?.now_playing.song.text}</p>
+        <p>{'artist: ' + data?.now_playing.song.artist}</p>
+        <p>{'title: ' + data?.now_playing.song.title}</p>
+        <p>{'text: ' + data?.now_playing.song.text}</p>
       </div>
 
       <div
